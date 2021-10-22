@@ -18,7 +18,7 @@ def sendwhatmsg_instantly(
     message: str,
     wait_time: int = 20,
     tab_close: bool = False,
-    close_time: int = 3,
+    close_time: int = 20,
 ) -> None:
     """Send WhatsApp Message Instantly"""
 
@@ -29,7 +29,7 @@ def sendwhatmsg_instantly(
         "https://web.whatsapp.com/send?phone=" + phone_no + "&text=" + quote(message)
     )
     time.sleep(20)
-    pg.click(core.WIDTH / 2, core.HEIGHT / 2)
+    pg.click(core.WIDTH / 3, core.HEIGHT / 3)
     time.sleep(30)
     #pg.press("enter")
     log.log_message(_time=time.localtime(), receiver=phone_no, message=message)
